@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Outlet, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Analytics } from "@vercel/analytics/react";
 
 function NotFoundComponent() {
   return (
@@ -76,6 +77,7 @@ function RootComponent() {
       <QueryClientProvider client={queryClient}>
         <Outlet />
       </QueryClientProvider>
+      <Analytics />
       <Scripts />
     </>
   );
